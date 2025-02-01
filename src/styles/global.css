@@ -1,0 +1,11 @@
+:root {
+    font-family: sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
