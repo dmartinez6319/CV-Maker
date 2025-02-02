@@ -1,7 +1,10 @@
+import EditorPage from "./pages/editFormPage"
+
 function App() {
 
   return (
     <>
+    <EditorPage />
     </>
   )
 }
