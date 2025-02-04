@@ -30,11 +30,8 @@ const FormItem = ({ item, isGrouped, setNewItem, index }) => {
     }
 
     let itemHolder = [];
-    for (let objectItem in item) {
-      itemHolder.push(
-        <label key={`label-${objectItem}`}> {item[objectItem].name} </label>
-      );
 
+    for (let objectItem in item) {
       const selectedInput = () => {
         if (item[objectItem].type === "textarea") {
           return (
@@ -61,14 +58,20 @@ const FormItem = ({ item, isGrouped, setNewItem, index }) => {
         }
       };
 
-      itemHolder.push(selectedInput());
+      itemHolder.push(
+        <div key = {item[objectItem].name + "-container"} className="grouped-form-container">
+          {selectedInput()}
+          <label key={`label-${objectItem}`}> {item[objectItem].name} </label>
+        </div>
+      );
     }
+
     console.log(itemHolder);
     return itemHolder;
   };
 
   if (isGrouped) {
-    return <div className="grouped-form-container">{inputObjectProps()}</div>;
+    return <>{inputObjectProps()}</>;
   }
 
   if (!isGrouped) {
