@@ -7,31 +7,27 @@ const EditorPage = () => {
     {
       name: "Name",
       type: "text",
-      value: ""
+      value: "",
     },
     {
       name: "Email",
       type: "email",
-      value: ""
-
+      value: "",
     },
     {
       name: "Phone Number",
       type: "tel",
-      value: ""
-
+      value: "",
     },
     {
       name: "GitHub",
       type: "text",
-      value: ""
-
+      value: "",
     },
     {
       name: "LinkedIn",
       type: "text",
-      value: ""
-
+      value: "",
     },
   ];
 
@@ -39,18 +35,22 @@ const EditorPage = () => {
     {
       name: "Item",
       type: "text",
+      value: "",
     },
     {
       name: "Item",
       type: "text",
+      value: "",
     },
     {
       name: "Item",
       type: "text",
+      value: "",
     },
     {
       name: "Item",
       type: "text",
+      value: "",
     },
   ];
 
@@ -59,38 +59,32 @@ const EditorPage = () => {
       {
         name: "Position",
         type: "text",
-        value: ""
-
+        value: "",
       },
       {
         name: "Company",
         type: "text",
-        value: ""
-
+        value: "",
       },
       {
         name: "Start Month",
         type: "text",
-        value: ""
-
+        value: "",
       },
       {
         name: "End Month / Blank if Present",
         type: "text",
-        value: ""
-
+        value: "",
       },
       {
         name: "Start Year",
         type: "number",
-        value: ""
-
+        value: "",
       },
       {
         name: "End Year / Present",
         type: "number",
-        value: ""
-
+        value: "",
       },
     ],
   ];
@@ -103,24 +97,24 @@ const EditorPage = () => {
         editItems={headerItems}
         isGrouped={false}
       />
-      {/* <EditSection
+      <EditSection
         title="Skills"
         canAdd={true}
         editItems={skillItems}
         isGrouped={false}
-      /> */}
+      />
       <EditSection
         title="Experience"
         canAdd={true}
         editItems={experienceItems}
         isGrouped={true}
       />
-      {/* <EditSection
+      <EditSection
         title="Projects"
         canAdd={true}
-        editItems={headerItems}
+        editItems={experienceItems}
         isGrouped={true}
-      /> */}
+      />
     </section>
   );
 };
