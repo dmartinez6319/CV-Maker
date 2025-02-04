@@ -3,10 +3,7 @@ const FormItem = ({ item, isGrouped, setNewItem, index }) => {
     setNewItem((prevItems) =>
       prevItems.map((entry, idx) =>
         idx === index
-          ? {
-              ...entry,
-              [objectItem]: { ...entry[objectItem], value: e.target.value },
-            }
+          ? { ...entry, [objectItem]: { ...entry[objectItem], value: e.target.value } }
           : entry
       )
     );
