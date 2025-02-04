@@ -34,25 +34,41 @@ const FormItem = ({ item, isGrouped, setNewItem, index }) => {
       itemHolder.push(
         <label key={`label-${objectItem}`}> {item[objectItem].name} </label>
       );
-      itemHolder.push(
-        <input
-          key={`input-${objectItem}`}
-          type={item[objectItem].type}
-          value={item[objectItem].value}
-          onChange={(e) => {
-            handleChange(e, objectItem);
-          }}
-        ></input>
-      );
+
+      const selectedInput = () => {
+        if (item[objectItem].type === "textarea") {
+          return (
+            <textarea
+              key={`input-${objectItem}`}
+              type={item[objectItem].type}
+              value={item[objectItem].value}
+              onChange={(e) => {
+                handleChange(e, objectItem);
+              }}
+            ></textarea>
+          );
+        } else {
+          return (
+            <input
+              key={`input-${objectItem}`}
+              type={item[objectItem].type}
+              value={item[objectItem].value}
+              onChange={(e) => {
+                handleChange(e, objectItem);
+              }}
+            ></input>
+          );
+        }
+      };
+
+      itemHolder.push(selectedInput());
     }
     console.log(itemHolder);
     return itemHolder;
   };
 
   if (isGrouped) {
-    return (
-      <div className="experience-form-container">{inputObjectProps()}</div>
-    );
+    return <div className="grouped-form-container">{inputObjectProps()}</div>;
   }
 
   if (!isGrouped) {

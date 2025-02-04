@@ -40,14 +40,14 @@ const EditSection = ({ title, canAdd, editItems, isGrouped }) => {
         {!isGrouped &&
           formItems.map((item, index) => {
             return (
-              <React.Fragment key={index}>
+              <div key={index} className="singleitem-form-container">
                 <FormItem
                   item={item}
                   index={index}
                   isGrouped={isGrouped}
                   setNewItem={setNewItem}
                 />
-              </React.Fragment>
+              </div>
             );
           })}
 

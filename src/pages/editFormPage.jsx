@@ -86,6 +86,46 @@ const EditorPage = () => {
         type: "number",
         value: "",
       },
+      {
+        name: "Description",
+        type: "textarea",
+        value: ""
+      }
+    ],
+  ];
+
+  const projectItems = [
+    [
+      {
+        name: "Name",
+        type: "text",
+        value: "",
+      },
+      {
+        name: "Start Month",
+        type: "text",
+        value: "",
+      },
+      {
+        name: "End Month / Blank if Present",
+        type: "text",
+        value: "",
+      },
+      {
+        name: "Start Year",
+        type: "number",
+        value: "",
+      },
+      {
+        name: "End Year / Present",
+        type: "number",
+        value: "",
+      },
+      {
+        name: "Description",
+        type: "textarea",
+        value: ""
+      }
     ],
   ];
 
@@ -112,7 +152,7 @@ const EditorPage = () => {
       <EditSection
         title="Projects"
         canAdd={true}
-        editItems={experienceItems}
+        editItems={projectItems}
         isGrouped={true}
       />
     </section>
