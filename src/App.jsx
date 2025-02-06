@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-      <EditorPage  resumeData = {resumeData} />
-      <DisplayPage  />
+      <EditorPage  resumeData = {resumeData} setResumeData = {setResumeData} />
+      <DisplayPage resumeData = {resumeData} setResumeData = {setResumeData} />
     </>
   );
 }
