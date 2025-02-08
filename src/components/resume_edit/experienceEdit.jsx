@@ -1,5 +1,6 @@
 import AddButton from "./edit_comps/add_button";
 import LabelInput from "./edit_comps/label_input";
+import RemoveButton from "./edit_comps/remove_button";
 
 const ExperienceEditSection = ({ resumeData, setResumeData }) => {
   return (
@@ -65,6 +66,7 @@ const ExperienceEditSection = ({ resumeData, setResumeData }) => {
                   );
                 })}
               </div>
+              <RemoveButton section = {"experienceSection"} index = {index} resumeData={resumeData} setResumeData={setResumeData}/>
             </div>
           );
         })}

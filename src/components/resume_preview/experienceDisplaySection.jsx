@@ -19,10 +19,10 @@ const ExperienceDisplaySection = ({ resumeData }) => {
               <p>{section.location}</p>
             </div>
             <ul className="description-list">
-              {section.description.map((item) => {
+              {section.description.map((item, itemIndex) => {
                 return (
                   <li
-                    key={section.title + "-" + item}
+                    key={item + "-" + itemIndex}
                     className="description-item"
                   >
                     {item}

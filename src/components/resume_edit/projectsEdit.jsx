@@ -1,3 +1,4 @@
+import AddButton from "./edit_comps/add_button";
 import LabelInput from "./edit_comps/label_input";
 
 const ProjectEditSection = ({ resumeData, setResumeData }) => {
@@ -51,6 +52,8 @@ const ProjectEditSection = ({ resumeData, setResumeData }) => {
           );
         })}
       </div>
+      <AddButton section = "projectSection" resumeData={resumeData} setResumeData={setResumeData} />
+
     </div>
   );
 };
