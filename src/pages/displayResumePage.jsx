@@ -7,7 +7,7 @@ import SkillDisplaySection from "../components/resume_preview/skillsDisplaySecti
 const DisplayPage = ({ resumeData }) => {
   return (
     <div className="display-resume">
-      <div className="display-resume-page">
+      <div className="display-resume-page" id="display-resume-page">
         <HeaderDisplaySection resumeData={resumeData} />
         <EducationDisplaySection resumeData={resumeData} />
         <SkillDisplaySection resumeData={resumeData} />

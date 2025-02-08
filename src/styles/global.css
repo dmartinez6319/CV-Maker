@@ -259,3 +259,26 @@ main {
         padding: 0;
       }
 }
+
+.print-button {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    padding: .5rem;
+}
+
+@media print {
+    body * {
+      visibility: hidden; /* Hide everything */
+    }
+    #display-resume-page, #display-resume-page * {
+      visibility: visible; /* Make resume visible */
+    }
+    #display-resume-page {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%; /* Ensures it takes full width */
+    }
+  }
+  
