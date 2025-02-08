@@ -1,6 +1,5 @@
 const HeaderDisplaySection = ({resumeData}) => {
 
-    console.log(resumeData)
 
     return (
         <div className="display-header-section">

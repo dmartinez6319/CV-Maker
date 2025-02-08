@@ -3,7 +3,7 @@ import LabelInput from "./edit_comps/label_input";
 const ProjectEditSection = ({ resumeData, setResumeData }) => {
   return (
     <div className="edit-project-section">
-      <h1>Experience</h1>
+      <h1>Projects</h1>
       <div className="edit-section">
         {resumeData.projectSection.map((item, index) => {
           return (

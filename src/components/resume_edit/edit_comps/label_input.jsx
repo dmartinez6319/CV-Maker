@@ -137,7 +137,6 @@ const LabelInput = ({
       },
     }));
   };
-  console.log(value, section);
   return (
     <div className="formInput">
       <label htmlFor={labelName}>{labelName}</label>

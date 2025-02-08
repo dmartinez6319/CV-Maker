@@ -1,3 +1,4 @@
+import AddButton from "./edit_comps/add_button";
 import LabelInput from "./edit_comps/label_input";
 
 const EducationEditSection = ({ resumeData, setResumeData }) => {
@@ -48,6 +49,8 @@ const EducationEditSection = ({ resumeData, setResumeData }) => {
           );
         })}
       </div>
+      <AddButton section = "educationSection" resumeData={resumeData} setResumeData={setResumeData} />
+
     </div>
   );
 };

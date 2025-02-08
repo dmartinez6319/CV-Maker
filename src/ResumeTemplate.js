@@ -1,59 +1,75 @@
 const emptyResume = {
-  headerSection: {
-    title: "",
-    email: "",
-    phoneNumber: NaN,
-    gitHub: "",
-    linkedIn: "",
-  },
-  educationSection: [
-    {
-      school: "",
-      location: "",
-      major: "",
-      date: "",
-    },
-  ],
+    headerSection: {
+        title: "", // UNGROUPED
+        info: {
+          email: "", // NESTED
+          phoneNumber: "",
+          gitHub: "",
+          linkedIn: "",
+        },
+      },
+      educationSection: [
+        {
+          school: "",
+          location: "",
+          major: "",
+          date: "",
+        },
+      ],
 
-  skillSection: [
-    {
-      name: "",
-      skillCategory: ["", "", ""],
-    },
-    {
-      name: "",
-      skillCategory: ["", "", ""],
-    },
-    {
-      name: "",
-      skillCategory: ["", "", ""],
-    },
-  ],
+      skillSection: [
+        {
+          // GROUPED FORM
+          name: "",
+          skillCategory: ["", "", ""], // LIST
+        },
+        {
+          name: "",
+          skillCategory: ["", "", ""],
+        },
+        {
+          name: "",
+          skillCategory: ["", "", ""],
+        },
+      ],
 
-  experienceSection: [
-    {
-      title: "",
-      date: "",
-      company: "",
-      location: "",
-      description: ["", "", ""],
-    },
-    {
-      title: "",
-      date: "",
-      company: "",
-      location: "",
-      description: ["", "", ""],
-    },
-  ],
+      experienceSection: [
+        {
+          title: "",
+          date: "",
+          company: "",
+          location: "",
+          description: [
+            // LIST
+            "",
+            "",
+            "",
+          ],
+        },
+        {
+          title: "",
+          date: "",
+          company: "",
+          location: "",
+          description: [
+            "",
+            "",
+            "",
+          ],
+        },
+      ],
 
-  projectSection: [
-    {
-      name: "",
-      date: "",
-      description: ["", "", ""],
-    },
-  ],
+      projectSection: [
+        {
+          name: "",
+          date: "",
+          description: [
+            "",
+            "",
+            "",
+          ],
+        },
+      ],
 };
 
 const exampleResume = {

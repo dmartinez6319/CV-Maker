@@ -1,3 +1,4 @@
+import AddButton from "./edit_comps/add_button";
 import LabelInput from "./edit_comps/label_input";
 
 const SkillEditSection = ({ resumeData, setResumeData }) => {
@@ -40,6 +41,8 @@ const SkillEditSection = ({ resumeData, setResumeData }) => {
           );
         })}
       </div>
+      <AddButton section = "skillSection" resumeData={resumeData} setResumeData={setResumeData} />
+
     </div>
   );
 };

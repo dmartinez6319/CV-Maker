@@ -6,7 +6,6 @@ import SkillDisplaySection from "../components/resume_preview/skillsDisplaySecti
 
 const DisplayPage = ({resumeData}) => {
 
-    console.log(resumeData)
 
     return (
         <div className="display-resume">
