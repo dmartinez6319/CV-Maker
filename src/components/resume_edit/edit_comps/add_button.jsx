@@ -12,6 +12,7 @@ const AddButton = ({ setResumeData, section }) => {
 
   return (
     <button
+    className="edit-button add-button"
       onClick={() => {
         addGrouped();
       }}

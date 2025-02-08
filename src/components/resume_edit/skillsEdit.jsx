@@ -1,9 +1,10 @@
 import AddButton from "./edit_comps/add_button";
 import LabelInput from "./edit_comps/label_input";
+import RemoveButton from "./edit_comps/remove_button";
 
 const SkillEditSection = ({ resumeData, setResumeData }) => {
   return (
-    <div className="edit-skill-section">
+    <div className="edit-skill-section edit-grouped">
       <h1>Technial Skills</h1>
       <div className="edit-section">
         {resumeData.skillSection.map((item, index) => {
@@ -37,6 +38,8 @@ const SkillEditSection = ({ resumeData, setResumeData }) => {
                   );
                 })}
               </div>
+              <RemoveButton section = {"skillSection"} index = {index} resumeData={resumeData} setResumeData={setResumeData}/>
+
             </div>
           );
         })}

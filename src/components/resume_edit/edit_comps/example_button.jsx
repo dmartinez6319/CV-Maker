@@ -5,7 +5,11 @@ const ExampleButton = ({ setResumeData }) => {
     setResumeData(exampleResume);
   };
 
-  return <button onClick={populateResume}>Example</button>;
+  return (
+    <button className="edit-button" onClick={populateResume}>
+      Example
+    </button>
+  );
 };
 
 export default ExampleButton;

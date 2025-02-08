@@ -5,7 +5,11 @@ const ResetButton = ({ setResumeData }) => {
     setResumeData(emptyResume);
   };
 
-  return <button onClick={resetResume}>Reset</button>;
+  return (
+    <button className="edit-button reset-button" onClick={resetResume}>
+      Reset
+    </button>
+  );
 };
 
 export default ResetButton;

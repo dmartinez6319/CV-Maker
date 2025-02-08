@@ -2,7 +2,7 @@ import LabelInput from "./edit_comps/label_input";
 
 const HeaderEditSection = ({ setResumeData, resumeData }) => {
   return (
-    <div className="edit-header-section">
+    <div className="edit-header-section edit-ungrouped">
       <h1>Personal Info</h1>
       <div className="edit-section">
         <LabelInput

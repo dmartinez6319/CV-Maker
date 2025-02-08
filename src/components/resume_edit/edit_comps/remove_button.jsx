@@ -1,19 +1,19 @@
 const RemoveButton = ({ resumeData, setResumeData, section, index }) => {
   const removeItem = () => {
     // const updatedArray = [...resumeData[section][index].slice(index,1)]
-    console.log(section,index)
-    console.log(resumeData[section][index])
+    console.log(section, index);
+    console.log(resumeData[section][index]);
 
     setResumeData((prevData) => ({
-        ...prevData,
-        [section]: prevData[section].filter( (item, idx) => idx !== index )
-    }))
-    console.log(resumeData)
-
+      ...prevData,
+      [section]: prevData[section].filter((item, idx) => idx !== index),
+    }));
+    console.log(resumeData);
   };
 
   return (
     <button
+      className="edit-button remove-button"
       onClick={() => {
         removeItem();
       }}

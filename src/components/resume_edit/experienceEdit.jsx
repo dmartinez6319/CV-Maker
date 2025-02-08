@@ -4,7 +4,7 @@ import RemoveButton from "./edit_comps/remove_button";
 
 const ExperienceEditSection = ({ resumeData, setResumeData }) => {
   return (
-    <div className="edit-experience-section">
+    <div className="edit-experience-section edit-grouped">
       <h1>Experience</h1>
       <div className="edit-section">
         {resumeData.experienceSection.map((item, index) => {

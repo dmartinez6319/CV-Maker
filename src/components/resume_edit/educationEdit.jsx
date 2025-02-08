@@ -1,9 +1,10 @@
 import AddButton from "./edit_comps/add_button";
 import LabelInput from "./edit_comps/label_input";
+import RemoveButton from "./edit_comps/remove_button";
 
 const EducationEditSection = ({ resumeData, setResumeData }) => {
   return (
-    <div className="edit-education-section">
+    <div className="edit-education-section edit-grouped">
       <h1>Education</h1>
       <div className="edit-section">
         {resumeData.educationSection.map((item, index) => {
@@ -45,12 +46,21 @@ const EducationEditSection = ({ resumeData, setResumeData }) => {
                 objectIndex={index}
                 value={item.date}
               />
+              <RemoveButton
+                section={"educationSection"}
+                index={index}
+                resumeData={resumeData}
+                setResumeData={setResumeData}
+              />
             </div>
           );
         })}
       </div>
-      <AddButton section = "educationSection" resumeData={resumeData} setResumeData={setResumeData} />
-
+      <AddButton
+        section="educationSection"
+        resumeData={resumeData}
+        setResumeData={setResumeData}
+      />
     </div>
   );
 };
