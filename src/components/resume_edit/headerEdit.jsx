@@ -20,7 +20,6 @@ const HeaderEditSection = ({ setResumeData, resumeData }) => {
           labelName="Email"
           targetValue="email"
           value={resumeData.headerSection.info.email}
-
         />
         <LabelInput
           nested={true}
@@ -29,8 +28,6 @@ const HeaderEditSection = ({ setResumeData, resumeData }) => {
           labelName="Phone Number"
           targetValue="phoneNumber"
           value={resumeData.headerSection.info.phoneNumber}
-
-          
         />
         <LabelInput
           nested={true}
@@ -39,7 +36,6 @@ const HeaderEditSection = ({ setResumeData, resumeData }) => {
           labelName="GitHub"
           targetValue="gitHub"
           value={resumeData.headerSection.info.gitHub}
-
         />
         <LabelInput
           nested={true}
@@ -48,7 +44,6 @@ const HeaderEditSection = ({ setResumeData, resumeData }) => {
           labelName="LinkedIn"
           targetValue="linkedIn"
           value={resumeData.headerSection.info.linkedIn}
-
         />
       </div>
     </div>

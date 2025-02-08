@@ -7,7 +7,7 @@ const SkillEditSection = ({ resumeData, setResumeData }) => {
       <div className="edit-section">
         {resumeData.skillSection.map((item, index) => {
           return (
-            <div className="edit-group" key={index}>
+            <div className="edit-group" key={`skillSection-${index}`}>
               <LabelInput // Skill Category
                 section={"skillSection"}
                 setResumeData={setResumeData}
@@ -18,26 +18,24 @@ const SkillEditSection = ({ resumeData, setResumeData }) => {
                 value={item.name}
               />
               <div className="edit-skill=items">
-
-              {item.skillCategory.map((skill, skIndex) => { // Skill Array Items
-                return (
+                {item.skillCategory.map((skill, skIndex) => {
+                  // Skill Array Items
+                  return (
                     <LabelInput // Skill Item LIST
-                    section={"skillSection"}
-                    setResumeData={setResumeData}
-                    labelName= {`Item ${skIndex}`}
-                    targetValue={skIndex}
-                    value={skill}
-                    objectIndex={index}
-                    itemIndex={skIndex}
-                    list={true}
-                    listItem = {"skillCategory"}
-                    key={`${item}-${skIndex}`}
-                  />
-                );
-              })}
-
+                      section={"skillSection"}
+                      setResumeData={setResumeData}
+                      labelName={`Item ${skIndex}`}
+                      targetValue={skIndex}
+                      value={skill}
+                      objectIndex={index}
+                      itemIndex={skIndex}
+                      list={true}
+                      listItem={"skillCategory"}
+                      key={`${item}-${skIndex}`}
+                    />
+                  );
+                })}
               </div>
-
             </div>
           );
         })}

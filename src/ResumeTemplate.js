@@ -76,7 +76,8 @@ const exampleResume = {
   ],
 
   skillSection: [
-    { // GROUPED FORM
+    {
+      // GROUPED FORM
       name: "Languages",
       skillCategory: ["JavaScript", "CSS", "HTML"], // LIST
     },
@@ -88,7 +89,6 @@ const exampleResume = {
       name: "Dev Tools",
       skillCategory: ["VSCode", "Git", "GitHub"],
     },
-    
   ],
 
   experienceSection: [
@@ -97,7 +97,8 @@ const exampleResume = {
       date: "June 2022 - Present",
       company: "Temple Co",
       location: "Savannah, GA",
-      description: [ // LIST
+      description: [
+        // LIST
         "Accomplished faster 50% runtime in X",
         "Integrated application into various tasks of Y",
         "Developed responsive Y, delivering 88% customer satification",
@@ -126,7 +127,6 @@ const exampleResume = {
         "Did cool stuff here with X Y and Z resulting in 100% faster runtime",
       ],
     },
-    
   ],
 };
 

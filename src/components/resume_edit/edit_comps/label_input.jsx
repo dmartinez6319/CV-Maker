@@ -13,14 +13,13 @@ const LabelInput = ({
   value,
 }) => {
   const groupedForm = (e) => {
-
     // setResumeData((prevData) => ({
 
     //   ...prevData, // Restore all the other objects
     //   [section]: prevData[section].map( // Go through all the objects inside the array
     //     (
     //       item,
-    //       idx 
+    //       idx
     //     ) =>
     //       idx === objectIndex // find the selected object
     //         ? { ...item, [targetValue]: e.target.value } // Update the target object
@@ -42,19 +41,18 @@ const LabelInput = ({
     // })
 
     setResumeData((prevData) => {
-        // Clone the array so React knows it's changed
-        const updatedSection = [...prevData[section]]; 
-        updatedSection[objectIndex] = { 
-          ...updatedSection[objectIndex], // Copy the existing object
-          [targetValue]: e.target.value, // Only update the changed field
-        };
-      
-        return { 
-          ...prevData, 
-          [section]: updatedSection // Replace only this section with the updated array
-        };
-      });
+      // Clone the array so React knows it's changed
+      const updatedSection = [...prevData[section]];
+      updatedSection[objectIndex] = {
+        ...updatedSection[objectIndex], // Copy the existing object
+        [targetValue]: e.target.value, // Only update the changed field
+      };
 
+      return {
+        ...prevData,
+        [section]: updatedSection, // Replace only this section with the updated array
+      };
+    });
   };
 
   const ungroupedForm = (e) => {
@@ -87,28 +85,27 @@ const LabelInput = ({
 
     // }));
 
-    setResumeData( (prevData) => ({ // When this is called we are given the Section (skillSection) and index of item (objectIndex)
+    setResumeData((prevData) => ({
+      // When this is called we are given the Section (skillSection) and index of item (objectIndex)
 
-        // We need to replace data wherever we traverse using the ...spread operator
-        ...prevData,
-        // In the next comma we are moving a step closer to where we need to go and eventually change
-        [section]: prevData[section].map( (skillObject, idx) =>   // We recreate the items inside the array that contain the objects
-
-            idx === objectIndex // If we find the correct skillCategory go inside
+      // We need to replace data wherever we traverse using the ...spread operator
+      ...prevData,
+      // In the next comma we are moving a step closer to where we need to go and eventually change
+      [section]: prevData[section].map(
+        (
+          skillObject,
+          idx // We recreate the items inside the array that contain the objects
+        ) =>
+          idx === objectIndex // If we find the correct skillCategory go inside
             ? {
                 ...skillObject,
-                [listItem]: skillObject[listItem].map( (item, itemIdx) => 
-                    itemIdx === itemIndex 
-                    ? e.target.value
-                    : item
-                ) // Go into the skillCategory
-
-            } // If its not the seleceted skillCategory Copy it and return it
+                [listItem]: skillObject[listItem].map((item, itemIdx) =>
+                  itemIdx === itemIndex ? e.target.value : item
+                ), // Go into the skillCategory
+              } // If its not the seleceted skillCategory Copy it and return it
             : skillObject
-        ) 
-        
-
-    } ))
+      ),
+    }));
 
     // setResumeData((prevData) => ({
     //     ...prevData,
@@ -125,7 +122,6 @@ const LabelInput = ({
     //         : skillObject // If not the selected skill object, return it unchanged
     //     ),
     //   }));
-
   };
 
   const nestedForm = (e) => {
