@@ -1,6 +1,6 @@
 const ProjectDisplaySection = ({ resumeData }) => {
   return (
-    <div className="display-project-section">
+    <div className="display-project-section display-section">
       <h1>Projects</h1>
       <hr />
 
@@ -8,9 +8,9 @@ const ProjectDisplaySection = ({ resumeData }) => {
         return (
           <div
             key={section.name + "-" + index}
-            className="display-project-item"
+            className="display-project-item "
           >
-            <div className="experience-display-top">
+            <div className="experience-display-top top-item">
               <p>{section.name}</p>
               <p>{section.date}</p>
             </div>

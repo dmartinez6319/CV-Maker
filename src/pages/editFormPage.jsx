@@ -9,6 +9,7 @@ import SkillEditSection from "../components/resume_edit/skillsEdit";
 const EditorPage = ({ resumeData, setResumeData }) => {
   return (
     <div className="edit-resume">
+      <h2>CVMaker</h2>
       <div className="edit-buttons">
         <ResetButton resumeData={resumeData} setResumeData={setResumeData} />
         <ExampleButton resumeData={resumeData} setResumeData={setResumeData} />

@@ -4,9 +4,9 @@ import RemoveButton from "./edit_comps/remove_button";
 
 const ProjectEditSection = ({ resumeData, setResumeData }) => {
   return (
-    <div className="edit-project-section">
+    <div className="edit-project-section edit-grouped">
       <h1>Projects</h1>
-      <div className="edit-section edit-grouped">
+      <div className="edit-section">
         {resumeData.projectSection.map((item, index) => {
           return (
             <div className="edit-group" key={`projectSection-${index}`}>

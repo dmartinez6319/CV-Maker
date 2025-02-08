@@ -1,6 +1,6 @@
 const SkillDisplaySection = ({ resumeData }) => {
   return (
-    <div className="display-skill-section">
+    <div className="display-skill-section display-section">
       <h1>Technial Skills</h1>
       <hr />
       {resumeData.skillSection.map((section, index) => {

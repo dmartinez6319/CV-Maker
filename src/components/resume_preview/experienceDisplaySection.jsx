@@ -1,6 +1,6 @@
 const ExperienceDisplaySection = ({ resumeData }) => {
   return (
-    <div className="display-experience-section">
+    <div className="display-experience-section display-section">
       <h1>Experience</h1>
       <hr />
       {resumeData.experienceSection.map((section, index) => {
@@ -9,12 +9,12 @@ const ExperienceDisplaySection = ({ resumeData }) => {
             key={section.title + "-" + index}
             className="experience-display-item"
           >
-            <div className="experience-display-top">
+            <div className="experience-display-top top-item">
               <p>{section.title}</p>
               <p>{section.date}</p>
             </div>
 
-            <div className="experience-display-bottom">
+            <div className="experience-display-bottom bottom-item">
               <p>{section.company}</p>
               <p>{section.location}</p>
             </div>
