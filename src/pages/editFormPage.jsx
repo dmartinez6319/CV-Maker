@@ -1,10 +1,19 @@
+import EducationEditSection from "../components/resume_edit/educationEdit";
+import ExperienceEditSection from "../components/resume_edit/experienceEdit";
+import HeaderEditSection from "../components/resume_edit/headerEdit";
+import ProjectEditSection from "../components/resume_edit/projectsEdit";
+import SkillEditSection from "../components/resume_edit/skillsEdit";
 
-// Put all Sections from resume into here and pass what title/items it should have
-
-const EditorPage = () => {
+const EditorPage = ({resumeData, setResumeData}) => {
 
     return (
-        <></>
+        <div className="edit-resume">
+            <HeaderEditSection resumeData = {resumeData} setResumeData = {setResumeData} />
+            <EducationEditSection resumeData = {resumeData} setResumeData = {setResumeData} />
+            <SkillEditSection resumeData = {resumeData} setResumeData = {setResumeData} />
+            <ExperienceEditSection resumeData = {resumeData} setResumeData = {setResumeData} />
+            <ProjectEditSection resumeData = {resumeData} setResumeData = {setResumeData} />
+        </div>
     )
 
 };

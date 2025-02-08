@@ -1,10 +1,10 @@
 import EditorPage from "./pages/editFormPage";
 import DisplayPage from "./pages/displayResumePage";
-import { emptyResume } from "./ResumeTemplate";
+import { emptyResume, exampleResume } from "./ResumeTemplate";
 import { useState } from "react";
 function App() {
 
-  const [resumeData, setResumeData] = useState(emptyResume);
+  const [resumeData, setResumeData] = useState(exampleResume);
 
   return (
     <>
