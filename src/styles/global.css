@@ -240,6 +240,10 @@ main {
 
 @media (max-width: 900px) {
 
+  h2 {
+    text-align: center;
+  }
+
       .display-resume {
         padding: 0;
         width: 100%;
@@ -280,5 +284,24 @@ main {
       top: 0;
       width: 100%; /* Ensures it takes full width */
     }
+  }
+
+  .CV-title {
+    background-color: rgb(81, 92, 255);
+    color: white;
+    padding: .2rem;
+  }
+
+  .maker {
+    font-size: medium;
+    text-decoration: underline;
+    font-weight: 250;
+    color: rgb(0, 0, 0);
+  }
+
+  .credit {
+    background-color: rgb(228, 228, 228);
+    border-radius: .5rem;
+    padding: 1rem;
   }
   
